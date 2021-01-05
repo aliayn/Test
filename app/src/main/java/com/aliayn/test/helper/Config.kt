@@ -8,4 +8,6 @@ object Config : KotprefModel() {
     override val kotprefName: String = "Prefs"
 
     fun reset(): Unit = blockingBulk { clear() }
+
+    var isAdmin by booleanPref(false)
 }
