@@ -3,8 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'kotlin-android-extensions'
-    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -78,22 +76,17 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version"
 
-    //Retrofit
-    def retrofit2_version = "2.9.0"
-    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
-
     //Navigation
     def nav_version = "2.3.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     //fresco
-    def fresco_version = "2.3.1"
+    def fresco_version = "2.3.0"
     implementation "com.facebook.fresco:fresco:$fresco_version"
 
     // Kotpref
-    def kotpref_version = "2.3.1"
+    def kotpref_version = "2.13.0"
     implementation "com.chibatching.kotpref:kotpref:$kotpref_version"
     implementation "com.chibatching.kotpref:initializer:$kotpref_version"
     implementation "com.chibatching.kotpref:enum-support:$kotpref_version"
