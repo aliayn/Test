@@ -16,4 +16,8 @@ class UserRepository @Inject constructor(
     suspend fun delete(user: User) = userDao.delete(user)
 
     fun getAllUsers(): LiveData<List<User>> = userDao.getAllUsers()
+
+    fun isExists(userName: String, passWord: String) = userDao.isExists(userName, passWord)
+
+    fun getCertainUser(userName: String, passWord: String) = userDao.getCertainUser(userName, passWord)
 }
