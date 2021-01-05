@@ -6,4 +6,8 @@
     <string name="login">Login</string>
 
     <string name="error_in_login">Your username or password is not correct!</string>
+    <string name="error_in_update">Your username or password is empty!</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="email">Email</string>
 </resources>
