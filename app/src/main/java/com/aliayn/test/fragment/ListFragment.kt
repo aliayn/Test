@@ -20,7 +20,12 @@ class ListFragment : BaseFragment(R.layout.list_fragment) {
     }
 
     private fun setupView() {
-        val adapter = UserListAdapter { deleteUser(it) }
+        val adapter = UserListAdapter(
+            deleteCallback = {
+                deleteUser(it)
+            }, selectedCallback = {
+                selectUser(it)
+            })
         user_list_recycler.adapter = adapter
 
         userViewModel.getAllUsers().observe(viewLifecycleOwner, {
@@ -30,5 +35,9 @@ class ListFragment : BaseFragment(R.layout.list_fragment) {
 
     private fun deleteUser(user: User) {
         userViewModel.delete(user)
+    }
+
+    private fun selectUser(user: User) {
+
     }
 }

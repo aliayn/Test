@@ -9,7 +9,10 @@ import com.aliayn.test.R
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.helper.userDiffUtil
 
-class UserListAdapter constructor(private val callback: (User) -> Unit) :
+class UserListAdapter constructor(
+    private val deleteCallback: (User) -> Unit,
+    private val selectedCallback: (User) -> Unit
+) :
     ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
