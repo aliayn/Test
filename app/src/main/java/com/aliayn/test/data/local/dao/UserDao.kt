@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.aliayn.test.data.local.entity.User
 
+@Dao
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
