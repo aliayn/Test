@@ -3,11 +3,16 @@ package com.aliayn.test.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.aliayn.test.R
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.helper.userDiffUtil
+import com.facebook.drawee.view.SimpleDraweeView
+import kotlinx.android.synthetic.main.user_list_layout.view.*
 
 class UserListAdapter constructor(
     private val deleteCallback: (User) -> Unit,
@@ -27,8 +32,16 @@ class UserListAdapter constructor(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(user: User) {
+        private val imgAvatar: SimpleDraweeView = itemView.img_avatar
+        private val txtFullName: TextView = itemView.txt_full_name
+        private val btnDelete: ImageButton = itemView.btn_delete
 
+        fun bind(user: User) {
+            imgAvatar.setImageURI(user.imageUrl)
+            txtFullName.text = user.fullName
+            btnDelete.setOnClickListener { deleteCallback.invoke(user) }
+            imgAvatar.setOnClickListener { selectedCallback.invoke(user) }
+            txtFullName.setOnClickListener { selectedCallback.invoke(user) }
         }
     }
 
