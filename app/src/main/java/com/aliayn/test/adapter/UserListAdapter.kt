@@ -12,17 +12,16 @@ import com.aliayn.test.R
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.extenstion.loadImage
 import com.aliayn.test.helper.userDiffUtil
-import com.facebook.drawee.view.SimpleDraweeView
 import kotlinx.android.synthetic.main.user_list_layout.view.*
 
 class UserListAdapter constructor(
-        private val deleteCallback: (User) -> Unit,
-        private val selectedCallback: (User) -> Unit
+    private val deleteCallback: (User) -> Unit,
+    private val selectedCallback: (User) -> Unit
 ) : ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-                LayoutInflater.from(parent.context).inflate(R.layout.user_list_layout, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.user_list_layout, parent, false)
         )
     }
 

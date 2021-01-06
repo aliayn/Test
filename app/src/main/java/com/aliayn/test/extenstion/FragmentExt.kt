@@ -12,13 +12,14 @@ import com.aliayn.test.helper.Constance
 
 fun Fragment.showGalleryIntent() {
     val pictureActionIntent = Intent(
-            Intent.ACTION_PICK,
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        Intent.ACTION_PICK,
+        MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+    )
     startActivityForResult(pictureActionIntent, Constance.GALLERY_PICTURE)
 }
 
 fun Fragment.findNavController(): NavController =
-        NavHostFragment.findNavController(this)
+    NavHostFragment.findNavController(this)
 
 fun Fragment.navigate(@IdRes resId: Int, bundle: Bundle? = bundleOf()): Unit =
-        findNavController().navigate(resId, bundle)
+    findNavController().navigate(resId, bundle)

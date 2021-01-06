@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel @ViewModelInject constructor(
-        private val userRepository: UserRepository
+    private val userRepository: UserRepository
 ) : ViewModel() {
 
     fun insert(user: User) = viewModelScope.launch(Dispatchers.IO) { userRepository.insert(user) }
@@ -21,7 +21,9 @@ class UserViewModel @ViewModelInject constructor(
 
     fun getAllUsers(): LiveData<List<User>> = userRepository.getAllUsers()
 
-    suspend fun isExists(userName: String, passWord: String) = userRepository.isExists(userName, passWord)
+    suspend fun isExists(userName: String, passWord: String) =
+        userRepository.isExists(userName, passWord)
 
-    suspend fun getCertainUser(userName: String, passWord: String) = userRepository.getCertainUser(userName, passWord)
+    suspend fun getCertainUser(userName: String, passWord: String) =
+        userRepository.getCertainUser(userName, passWord)
 }
