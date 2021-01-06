@@ -10,6 +10,7 @@ import com.aliayn.test.R
 import com.aliayn.test.base.BaseFragment
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.extenstion.*
+import com.aliayn.test.helper.Config
 import com.aliayn.test.helper.Constance.GALLERY_PICTURE
 import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
@@ -31,7 +32,7 @@ class SignUpFragment : BaseFragment(R.layout.sign_up_fragment) {
         if (resultCode == RESULT_OK && requestCode == GALLERY_PICTURE) {
             data?.data?.let {
                 user.imageUrl = it.toString()
-                btn_camera.loadImage(it.toString())
+                btn_camera.loadImage(it)
             } ?: run {
                 context?.toast(resources.getString(R.string.error_in_getting_photo))
             }
@@ -83,6 +84,7 @@ class SignUpFragment : BaseFragment(R.layout.sign_up_fragment) {
             passWord = edt_pass_word.text.toString()
         }
         userViewModel.insert(user)
+        Config.isAdmin = false
         navigate(R.id.action_signUpFragment_to_profileFragment, bundleOf(USER to user))
     }
 
