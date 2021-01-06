@@ -18,4 +18,5 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="email">Email</string>
+    <string name="no_record">No record!</string>
 </resources>

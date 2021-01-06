@@ -7,16 +7,14 @@
     android:layout_marginBottom="@dimen/normal_margin"
     android:orientation="horizontal">
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <ImageView
         android:id="@+id/img_avatar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_weight="1"
-        app:failureImage="@drawable/ic_avatar"
-        app:placeholderImage="@drawable/ic_avatar"
-        app:placeholderImageScaleType="centerCrop"
-        app:roundAsCircle="true" />
+        android:src="@drawable/ic_avatar"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/txt_full_name"
