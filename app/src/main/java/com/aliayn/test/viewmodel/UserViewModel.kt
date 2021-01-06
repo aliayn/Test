@@ -21,7 +21,7 @@ class UserViewModel @ViewModelInject constructor(
 
     fun getAllUsers(): LiveData<List<User>> = userRepository.getAllUsers()
 
-    fun isExists(userName: String, passWord: String) = userRepository.isExists(userName, passWord)
+    suspend fun isExists(userName: String, passWord: String) = userRepository.isExists(userName, passWord)
 
-    fun getCertainUser(userName: String, passWord: String) = userRepository.getCertainUser(userName, passWord)
+    suspend fun getCertainUser(userName: String, passWord: String) = userRepository.getCertainUser(userName, passWord)
 }

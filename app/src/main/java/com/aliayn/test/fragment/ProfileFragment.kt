@@ -10,6 +10,7 @@ import com.aliayn.test.extenstion.beDisableIf
 import com.aliayn.test.extenstion.beGoneIf
 import com.aliayn.test.extenstion.toast
 import com.aliayn.test.helper.Config
+import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.profile_fragment.*
 
@@ -19,6 +20,8 @@ class ProfileFragment : BaseFragment(R.layout.profile_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val model = savedInstanceState?.get(USER) as User
+        setupView(model)
     }
 
     private fun setupView(user: User) {

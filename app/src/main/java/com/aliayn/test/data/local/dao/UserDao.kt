@@ -20,9 +20,9 @@ interface UserDao {
     fun getAllUsers(): LiveData<List<User>>
 
     @Query("SELECT EXISTS (SELECT * FROM user_table WHERE userName = :userName AND passWord = :passWord)")
-    fun isExists(userName: String, passWord: String): Boolean
+    suspend fun isExists(userName: String, passWord: String): Boolean
 
     @Query(" SELECT * FROM user_table WHERE userName = :userName AND passWord = :passWord")
-    fun getCertainUser(userName: String, passWord: String): User
+    suspend fun getCertainUser(userName: String, passWord: String): User
 
 }
