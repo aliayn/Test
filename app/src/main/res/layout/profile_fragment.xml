@@ -64,9 +64,9 @@
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="@drawable/border_shape"
             android:importantForAutofill="no"
+            android:inputType="text"
             android:textCursorDrawable="@null"
-            tools:ignore="LabelFor"
-            android:inputType="text" />
+            tools:ignore="LabelFor" />
 
         <TextView
             android:layout_width="match_parent"

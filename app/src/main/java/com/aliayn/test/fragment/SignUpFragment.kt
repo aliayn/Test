@@ -28,7 +28,7 @@ class SignUpFragment : BaseFragment(R.layout.sign_up_fragment) {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == RESULT_OK && requestCode == GALLERY_PICTURE){
+        if (resultCode == RESULT_OK && requestCode == GALLERY_PICTURE) {
             data?.data?.let {
                 user.imageUrl = it.toString()
                 btn_camera.setImageURI(it.toString())

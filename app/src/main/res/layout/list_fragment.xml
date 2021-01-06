@@ -10,6 +10,6 @@
         android:id="@+id/user_list_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/user_list_layout"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/user_list_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

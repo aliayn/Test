@@ -18,15 +18,15 @@
 
     <EditText
         android:id="@+id/edt_user_name"
-        android:background="@drawable/border_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/normal_margin"
         android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
         android:importantForAutofill="no"
-        tools:ignore="LabelFor"
-        android:textCursorDrawable="@null" />
+        android:textCursorDrawable="@null"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:layout_width="match_parent"
@@ -39,12 +39,12 @@
 
     <EditText
         android:id="@+id/edt_pass_word"
-        android:background="@drawable/border_shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/normal_margin"
         android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         tools:ignore="LabelFor" />
@@ -61,8 +61,8 @@
             android:id="@+id/btn_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/normal_btn_background"
             android:layout_alignParentStart="true"
+            android:background="@drawable/normal_btn_background"
             android:text="@string/signUp"
             android:textAllCaps="false" />
 
@@ -70,8 +70,8 @@
             android:id="@+id/btn_signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/normal_btn_background"
             android:layout_alignParentEnd="true"
+            android:background="@drawable/normal_btn_background"
             android:text="@string/login"
             android:textAllCaps="false"
             tools:ignore="RelativeOverlap" />

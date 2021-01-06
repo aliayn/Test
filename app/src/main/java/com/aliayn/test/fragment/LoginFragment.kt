@@ -17,7 +17,7 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btn_login.setOnClickListener { login(edt_user_name.text.toString(),edt_pass_word.text.toString()) }
+        btn_login.setOnClickListener { login(edt_user_name.text.toString(), edt_pass_word.text.toString()) }
         btn_signUp.setOnClickListener { signUp() }
     }
 
@@ -35,11 +35,11 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
 
     }
 
-    private fun listPage(){
+    private fun listPage() {
 
     }
 
-    private fun profilePage(user: User){
+    private fun profilePage(user: User) {
 
     }
 }

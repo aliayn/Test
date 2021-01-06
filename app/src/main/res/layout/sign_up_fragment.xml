@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".fragment.SignUpFragment">
 
     <TextView
@@ -24,9 +24,9 @@
         android:layout_marginTop="@dimen/normal_margin"
         android:layout_marginEnd="@dimen/medium_margin"
         android:background="@drawable/border_shape"
-        android:maxLines="1"
-        android:maxLength="20"
         android:importantForAutofill="no"
+        android:maxLength="20"
+        android:maxLines="1"
         android:textCursorDrawable="@null"
         tools:ignore="LabelFor,TextFields" />
 
@@ -48,9 +48,9 @@
         android:layout_marginEnd="@dimen/medium_margin"
         android:background="@drawable/border_shape"
         android:importantForAutofill="no"
-        android:maxLines="1"
-        android:maxLength="40"
         android:inputType="textEmailAddress"
+        android:maxLength="40"
+        android:maxLines="1"
         tools:ignore="LabelFor" />
 
     <TextView
@@ -71,9 +71,9 @@
         android:layout_marginEnd="@dimen/medium_margin"
         android:background="@drawable/border_shape"
         android:importantForAutofill="no"
-        android:maxLines="1"
-        android:maxLength="20"
         android:inputType="textPassword"
+        android:maxLength="20"
+        android:maxLines="1"
         tools:ignore="LabelFor" />
 
     <TextView
@@ -94,9 +94,9 @@
         android:layout_marginEnd="@dimen/medium_margin"
         android:background="@drawable/border_shape"
         android:importantForAutofill="no"
-        android:maxLines="1"
-        android:maxLength="20"
         android:inputType="textPassword"
+        android:maxLength="20"
+        android:maxLines="1"
         tools:ignore="LabelFor" />
 
     <RelativeLayout
@@ -137,12 +137,12 @@
 
     <Button
         android:id="@+id/btn_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/activity_margin"
         android:layout_marginEnd="@dimen/medium_margin"
-        android:layout_gravity="end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:background="@drawable/normal_btn_background"
         android:text="@string/signUp"
         android:textAllCaps="false" />

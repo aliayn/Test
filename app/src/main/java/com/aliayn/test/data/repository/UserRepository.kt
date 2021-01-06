@@ -6,7 +6,7 @@ import com.aliayn.test.data.local.entity.User
 import javax.inject.Inject
 
 class UserRepository @Inject constructor(
-    private val userDao: UserDao
+        private val userDao: UserDao
 ) {
 
     suspend fun insert(user: User) = userDao.insert(user)

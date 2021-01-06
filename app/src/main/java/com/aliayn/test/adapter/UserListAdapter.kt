@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -15,14 +14,14 @@ import com.facebook.drawee.view.SimpleDraweeView
 import kotlinx.android.synthetic.main.user_list_layout.view.*
 
 class UserListAdapter constructor(
-    private val deleteCallback: (User) -> Unit,
-    private val selectedCallback: (User) -> Unit
+        private val deleteCallback: (User) -> Unit,
+        private val selectedCallback: (User) -> Unit
 ) :
-    ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
+        ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.user_list_layout, parent, false)
+                LayoutInflater.from(parent.context).inflate(R.layout.user_list_layout, parent, false)
         )
     }
 

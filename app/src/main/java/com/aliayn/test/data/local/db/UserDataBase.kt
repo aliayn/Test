@@ -16,7 +16,7 @@ abstract class UserDataBase : RoomDatabase() {
 
     companion object : SingletonHolder<Context, UserDataBase>({
         Room.databaseBuilder(it.applicationContext, UserDataBase::class.java, DATABASE_NAME)
-            .fallbackToDestructiveMigration()
-            .build()
+                .fallbackToDestructiveMigration()
+                .build()
     })
 }
