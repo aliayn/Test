@@ -11,6 +11,5 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         Kotpref.init(context = this)
-        Fresco.initialize(this)
     }
 }

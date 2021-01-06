@@ -6,10 +6,7 @@ import androidx.fragment.app.activityViewModels
 import com.aliayn.test.R
 import com.aliayn.test.base.BaseFragment
 import com.aliayn.test.data.local.entity.User
-import com.aliayn.test.extenstion.beDisableIf
-import com.aliayn.test.extenstion.beGoneIf
-import com.aliayn.test.extenstion.isPasswordValid
-import com.aliayn.test.extenstion.toast
+import com.aliayn.test.extenstion.*
 import com.aliayn.test.helper.Config
 import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
@@ -21,7 +18,7 @@ class ProfileFragment : BaseFragment(R.layout.profile_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        arguments?.getParcelable<User>(USER)?.let { setupView(it) }
+        arguments?.getParcelable<User>(USER)?.let { setupView(it) } ?: activity?.onBackPressed()
     }
 
     private fun setupView(user: User) {
@@ -33,6 +30,7 @@ class ProfileFragment : BaseFragment(R.layout.profile_fragment) {
         edt_user_name.setText(user.userName)
         edt_password.setText(user.passWord)
         txt_full_name.text = user.fullName
+        user.imageUrl?.let { img_avatar.loadImage(it) }
 
         btn_update.setOnClickListener { update(user) }
         btn_delete.setOnClickListener { delete(user) }

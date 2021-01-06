@@ -119,7 +119,7 @@
             android:text="@string/image"
             android:theme="@style/TextTitle" />
 
-        <com.facebook.drawee.view.SimpleDraweeView
+        <ImageView
             android:id="@+id/btn_camera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,10 +128,7 @@
             android:maxWidth="48dp"
             android:maxHeight="48dp"
             android:text="@string/login"
-            app:actualImageScaleType="centerCrop"
-            app:placeholderImage="@drawable/ic_camera"
-            app:placeholderImageScaleType="centerCrop"
-            app:roundAsCircle="true"
+            android:src="@drawable/ic_camera"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
