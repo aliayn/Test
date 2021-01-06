@@ -95,4 +95,8 @@ dependencies {
     //picasso
     def picasso_version = "2.71828"
     implementation "com.squareup.picasso:picasso:$picasso_version"
+
+    //sdp
+    def sdp_version = "1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$sdp_version"
 }

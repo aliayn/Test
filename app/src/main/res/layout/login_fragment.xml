@@ -18,6 +18,7 @@
 
     <EditText
         android:id="@+id/edt_user_name"
+        android:theme="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
@@ -40,6 +41,7 @@
     <EditText
         android:id="@+id/edt_pass_word"
         android:layout_width="match_parent"
+        android:theme="@style/EditTextStyle"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/normal_margin"
