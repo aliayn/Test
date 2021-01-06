@@ -2,11 +2,19 @@
     <string name="app_name">Test</string>
     <string name="username">Username:</string>
     <string name="password">Password:</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="username_or_email">Email/Username:</string>
+    <string name="image">Image:</string>
+    <string name="fullName">Full Name:</string>
     <string name="signUp">SignUp</string>
     <string name="login">Login</string>
 
     <string name="error_in_login">Your username or password is not correct!</string>
     <string name="error_in_update">Your username or password is empty!</string>
+    <string name="error_in_empty_password">Password field is empty!</string>
+    <string name="error_in_validate_password">Password field must contain numerical and capital values</string>
+    <string name="error_in_confirm_password">Password field and confirm password are not the same</string>
+    <string name="error_in_getting_photo">Error in getting photo</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="email">Email</string>

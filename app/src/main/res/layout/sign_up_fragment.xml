@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.SignUpFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:text="@string/fullName"
+        android:theme="@style/TextTitle" />
+
+    <EditText
+        android:id="@+id/edt_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:importantForAutofill="no"
+        android:textCursorDrawable="@null"
+        tools:ignore="LabelFor,TextFields" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:text="@string/username_or_email"
+        android:theme="@style/TextTitle" />
+
+    <EditText
+        android:id="@+id/edt_username_or_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
+        android:importantForAutofill="no"
+        android:maxLines="1"
+        android:maxLength="40"
+        android:inputType="textEmailAddress"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:text="@string/password"
+        android:theme="@style/TextTitle" />
+
+    <EditText
+        android:id="@+id/edt_pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
+        android:importantForAutofill="no"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:text="@string/confirm_password"
+        android:theme="@style/TextTitle" />
+
+    <EditText
+        android:id="@+id/edt_confirm_pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:background="@drawable/border_shape"
+        android:importantForAutofill="no"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:inputType="textPassword"
+        tools:ignore="LabelFor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/image"
+            android:theme="@style/TextTitle" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/txt_image"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:text="@string/login"
+            app:actualImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/ic_camera"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_signUp"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_gravity="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/normal_btn_background"
+        android:text="@string/signUp"
+        android:textAllCaps="false" />
+
+</LinearLayout>
