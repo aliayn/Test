@@ -16,8 +16,7 @@ import kotlinx.android.synthetic.main.user_list_layout.view.*
 class UserListAdapter constructor(
         private val deleteCallback: (User) -> Unit,
         private val selectedCallback: (User) -> Unit
-) :
-        ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
+) : ListAdapter<User, UserListAdapter.ViewHolder>(userDiffUtil) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
