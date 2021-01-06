@@ -15,6 +15,8 @@
     <string name="error_in_validate_password">Password field must contain numerical and capital values</string>
     <string name="error_in_confirm_password">Password field and confirm password are not the same</string>
     <string name="error_in_getting_photo">Error in getting photo</string>
+    <string name="update_success">Update profile successfully</string>
+    <string name="delete_success">Delete profile successfully</string>
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="email">Email</string>

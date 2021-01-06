@@ -39,6 +39,7 @@ class ProfileFragment : BaseFragment(R.layout.profile_fragment) {
     private fun delete(user: User) {
         userViewModel.delete(user)
         activity?.onBackPressed()
+        context?.toast(resources.getString(R.string.delete_success))
     }
 
     private fun update(user: User) {
@@ -47,6 +48,7 @@ class ProfileFragment : BaseFragment(R.layout.profile_fragment) {
                 user.userName = edt_user_name.text.toString()
                 user.passWord = edt_password.text.toString()
                 userViewModel.update(user)
+                context?.toast(resources.getString(R.string.update_success))
             } else {
                 context?.toast(resources.getString(R.string.error_in_validate_password))
             }

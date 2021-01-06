@@ -16,7 +16,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideDatabase(@ApplicationContext appContext: Context) =
-        UserDataBase.getInstance(appContext)
+            UserDataBase.getInstance(appContext)
 
     @Singleton
     @Provides

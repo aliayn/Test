@@ -10,6 +10,7 @@ import com.aliayn.test.base.BaseFragment
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.extenstion.navigate
 import com.aliayn.test.extenstion.toast
+import com.aliayn.test.helper.Config
 import com.aliayn.test.helper.Constance
 import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
@@ -34,8 +35,10 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
     private fun login(userName: String, passWord: String) {
         lifecycleScope.launch {
             if (userName == Constance.ADMIN_USERNAME && passWord == Constance.ADMIN_PASSWORD) {
+                Config.isAdmin = true
                 listPage()
             } else if (userViewModel.isExists(userName, passWord)) {
+                Config.isAdmin = false
                 profilePage(userViewModel.getCertainUser(userName, passWord))
             } else {
                 context?.toast(resources.getString(R.string.error_in_login))
@@ -47,7 +50,9 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
 
     private fun listPage() = navigate(R.id.action_loginFragment_to_listFragment)
 
-    private fun profilePage(user: User) {
-        navigate(R.id.action_loginFragment_to_profileFragment, bundleOf(USER to user))
-    }
+    private fun profilePage(user: User) = navigate(
+        R.id.action_loginFragment_to_profileFragment,
+        bundleOf(USER to user)
+    )
+
 }

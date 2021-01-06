@@ -126,8 +126,8 @@
             android:layout_toEndOf="@+id/txt_image"
             android:maxWidth="48dp"
             android:maxHeight="48dp"
-            android:src="@drawable/ic_camera"
             android:text="@string/login"
+            android:src="@drawable/ic_camera"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
