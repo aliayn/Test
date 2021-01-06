@@ -9,6 +9,4 @@ object Constance {
     const val ADMIN_PASSWORD = "1234"
 
     const val GALLERY_PICTURE = 1
-
-    const val REGEX_PASSWORD_PATTERN = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])$"
 }

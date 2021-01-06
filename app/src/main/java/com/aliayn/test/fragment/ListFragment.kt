@@ -2,12 +2,15 @@ package com.aliayn.test.fragment
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import com.aliayn.test.R
 import com.aliayn.test.adapter.UserListAdapter
 import com.aliayn.test.base.BaseFragment
 import com.aliayn.test.data.local.entity.User
 import com.aliayn.test.extenstion.beGoneIf
+import com.aliayn.test.extenstion.navigate
+import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.list_fragment.*
 
@@ -40,6 +43,6 @@ class ListFragment : BaseFragment(R.layout.list_fragment) {
     }
 
     private fun selectUser(user: User) {
-
+        navigate(R.id.action_listFragment_to_profileFragment, bundleOf(USER to user))
     }
 }

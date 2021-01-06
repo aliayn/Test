@@ -74,11 +74,11 @@
             android:layout_marginStart="@dimen/medium_margin"
             android:layout_marginTop="@dimen/activity_margin"
             android:layout_marginEnd="@dimen/medium_margin"
-            android:text="@string/email"
+            android:text="@string/password"
             android:theme="@style/TextTitle" />
 
         <EditText
-            android:id="@+id/edt_email"
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medium_margin"
@@ -86,7 +86,7 @@
             android:layout_marginEnd="@dimen/medium_margin"
             android:background="@drawable/border_shape"
             android:importantForAutofill="no"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             tools:ignore="LabelFor" />
 
         <RelativeLayout

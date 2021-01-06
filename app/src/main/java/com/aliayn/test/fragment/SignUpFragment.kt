@@ -4,14 +4,17 @@ import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.activityViewModels
 import com.aliayn.test.R
 import com.aliayn.test.base.BaseFragment
 import com.aliayn.test.data.local.entity.User
+import com.aliayn.test.extenstion.isPasswordValid
+import com.aliayn.test.extenstion.navigate
 import com.aliayn.test.extenstion.showGalleryIntent
 import com.aliayn.test.extenstion.toast
 import com.aliayn.test.helper.Constance.GALLERY_PICTURE
-import com.aliayn.test.helper.Constance.REGEX_PASSWORD_PATTERN
+import com.aliayn.test.helper.Constance.USER
 import com.aliayn.test.viewmodel.UserViewModel
 import kotlinx.android.synthetic.main.sign_up_fragment.*
 
@@ -59,7 +62,7 @@ class SignUpFragment : BaseFragment(R.layout.sign_up_fragment) {
 
     private fun checkPasswordForSignUp(): Boolean {
         if (edt_pass_word.text.isNotEmpty()) {
-            return if (edt_pass_word.text.toString().matches(Regex(REGEX_PASSWORD_PATTERN))) {
+            return if (edt_pass_word.text.toString().isPasswordValid()) {
                 if (edt_pass_word.text.toString() == edt_confirm_pass_word.text.toString()) {
                     true
                 } else {
@@ -83,6 +86,7 @@ class SignUpFragment : BaseFragment(R.layout.sign_up_fragment) {
             passWord = edt_pass_word.text.toString()
         }
         userViewModel.insert(user)
+        navigate(R.id.action_signUpFragment_to_profileFragment, bundleOf(USER to user))
     }
 
     private fun getImage() = showGalleryIntent()
