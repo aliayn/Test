@@ -22,7 +22,7 @@ class LoginFragment : BaseFragment(R.layout.login_fragment) {
     }
 
     private fun login(userName: String, passWord: String) {
-        if (userName == Constance.ADMIN_PASSWORD && passWord == Constance.ADMIN_PASSWORD) {
+        if (userName == Constance.ADMIN_USERNAME && passWord == Constance.ADMIN_PASSWORD) {
             listPage()
         } else if (userViewModel.isExists(userName, passWord)) {
             profilePage(userViewModel.getCertainUser(userName, passWord))

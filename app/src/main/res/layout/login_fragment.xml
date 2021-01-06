@@ -73,7 +73,8 @@
             android:background="@drawable/normal_btn_background"
             android:layout_alignParentEnd="true"
             android:text="@string/login"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
 </LinearLayout>
