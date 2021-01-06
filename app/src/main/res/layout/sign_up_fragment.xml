@@ -17,7 +17,6 @@
 
     <EditText
         android:id="@+id/edt_full_name"
-        android:theme="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
@@ -28,6 +27,7 @@
         android:maxLength="20"
         android:maxLines="1"
         android:textCursorDrawable="@null"
+        android:theme="@style/EditTextStyle"
         tools:ignore="LabelFor,TextFields" />
 
     <TextView
@@ -41,7 +41,6 @@
 
     <EditText
         android:id="@+id/edt_username_or_email"
-        android:theme="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
@@ -52,6 +51,7 @@
         android:inputType="textEmailAddress"
         android:maxLength="40"
         android:maxLines="1"
+        android:theme="@style/EditTextStyle"
         tools:ignore="LabelFor" />
 
     <TextView
@@ -65,7 +65,6 @@
 
     <EditText
         android:id="@+id/edt_pass_word"
-        android:theme="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
@@ -76,6 +75,7 @@
         android:inputType="textPassword"
         android:maxLength="20"
         android:maxLines="1"
+        android:theme="@style/EditTextStyle"
         tools:ignore="LabelFor" />
 
     <TextView
@@ -89,7 +89,6 @@
 
     <EditText
         android:id="@+id/edt_confirm_pass_word"
-        android:theme="@style/EditTextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
@@ -100,6 +99,7 @@
         android:inputType="textPassword"
         android:maxLength="20"
         android:maxLines="1"
+        android:theme="@style/EditTextStyle"
         tools:ignore="LabelFor" />
 
     <RelativeLayout
@@ -130,8 +130,8 @@
             android:layout_toEndOf="@+id/txt_image"
             android:maxWidth="48dp"
             android:maxHeight="48dp"
-            android:text="@string/login"
             android:src="@drawable/ic_camera"
+            android:text="@string/login"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
